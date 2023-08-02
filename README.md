@@ -1,6 +1,7 @@
 # Mazda-3-tape-md-aux
 Trying to achieve aux on my car, with bluetooth connection... I don't know what will happen.
-Dislaimer: I don't assume any responsabilities about all this stuff
+
+Disclaimer: I don't assume any responsabilities about all this stuff
 
 By the way I'm going to summarize down here all info I found:
 
