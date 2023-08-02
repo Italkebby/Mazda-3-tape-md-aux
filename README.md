@@ -4,10 +4,10 @@ Dislaimer: I don't assume any responsabilities about all this stuff
 
 By the way I'm going to summarize down here all info I found:
 
-First I found a discussion on rx8club.com [link]([https://www.rx8club.com/members/willlies-113834/](https://www.rx8club.com/new-member-forum-197/%2415-aux-solution-tape-md-button-262520/)) about developing a system DIY (check [Thank all of you](Thanks%20to%20and%20start%20point.png) ). 
+First I found a discussion on rx8club.com [link](https://www.rx8club.com/new-member-forum-197/%2415-aux-solution-tape-md-button-262520/) about developing a system DIY (check [Thank all of you](Thanks%20to%20and%20start%20point.png) ). 
 So I get the code (in Aux_1_1) and I modify a delay from 1700 to 1750 (check in the code).
 
-Then I decided to draw a schema about all the parts and how to connect each others.
+Then I decided to draw a schema about all the parts and how to connect them.
 
 ![Alt text](schema%20di%20principioV3.drawio.png)
 
@@ -20,7 +20,7 @@ I think the DCDC converter is a plus it doesn't really required, I could use Vin
 After I purchased the Bluetooth module [like this one](btmodule.jpg), I was having alternator whine noise in the audio line, this issue could be about ground loop problem so I bought [this](groundloopinsulator.jpg) to detach the ground fixing the problem.
 
 
-Other infos about this project:
+Other info about this project:
 - https://github.com/Krasutski/mazda_tape_deck_emulator -> code for Mazda 6 2005 3.0L with tape/md button
 - https://nikosapi.org/hardware/mazda-radio/davidoshea-archive/radio/ -> how does it work the bus communication (head unit <--> Tape Deck)
 - https://github.com/pschatzmann/ESP32-A2DP -> by using ESP32 and BLE with the smartphone
