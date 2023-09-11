@@ -22,6 +22,7 @@ After I purchased the Bluetooth module [like this one](btmodule.jpg), I was havi
 
 
 Update 11/09/2023
+
 Last week all the system stop working correctly, I mean the Tape/md function run in timeout after 30 seconds.
 I was able to fix that problem but I'm not sure about the causes. I have draw a schematic that shows where I think the potentially causes are:
 ![Alt text](Problems/problema_timeout30sec.png)
