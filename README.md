@@ -25,6 +25,7 @@ Update 11/09/2023
 Last week all the system stop working correctly, I mean the Tape/md function run in timeout after 30 seconds.
 I was able to fix that problem but I'm not sure about the causes. I have draw a schematic that shows where I think the potentially causes are:
 ![Alt text](Problems/problema_timeout30sec.png)
+
 It's likely that the cable tie I put in place as an electrician exerted pressure and, due to vibrations, caused a poor connection or disconnected one of these audio jacks.
 
 Other info about this project:
