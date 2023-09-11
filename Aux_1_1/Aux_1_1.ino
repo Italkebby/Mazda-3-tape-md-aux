@@ -6,8 +6,8 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE S
 THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#define DATA_PIN 2 // non TOCCARE perchè pare che non funzioni con altri pin 
-
+#define DATA_PIN 3 // non TOCCARE perchè pare che non funzioni con altri pin 
+#define DEBUG 0
 volatile uint8_t buff = 0; //we only need the first 2 nibbles of any given message
 volatile uint8_t buffPos = 0; //keeps track of which bit we're on
 volatile unsigned long int lowTime;  //keeps track of how long the bus was low
@@ -15,11 +15,13 @@ volatile unsigned long int highTime;  //keeps track of how long the bus was high
 
 void setup() {
   //set up pins
-  pinMode(DATA_PIN, INPUT);
+  pinMode(DATA_PIN, INPUT_PULLUP);
   attachInterrupt(0, isr, CHANGE);  //attach the interrupt
   
   interrupts();  //enable interrupts
-  Serial.begin(9600);
+  #if DEBUG == 1
+    Serial.begin(9600);
+  #endif
 }
 
 void loop() {
@@ -43,7 +45,9 @@ void loop() {
       sendNibble(0x0);  //data
       sendNibble(0xC);  //data
       sendNibble(0x3);  //checksum
-      Serial.println("AnybodyHome?");
+      #if DEBUG == 1
+        Serial.println("AnybodyHome?");
+       #endif
     }
     
     else if(buff == 0x09){  //Wake up
@@ -76,7 +80,9 @@ void loop() {
       sendNibble(0x0);  //data
       sendNibble(0x1);  //data
       sendNibble(0x0);  //checksum
-      Serial.println("Wake Up");
+      #if DEBUG == 1
+        Serial.println("Wake Up");
+      #endif
     }
     else if(buff == 0x01){  //Some control command
       delay(10);
@@ -97,7 +103,9 @@ void loop() {
       sendNibble(0x0);  //data
       sendNibble(0x1);  //data
       sendNibble(0x0);  //checksum
-      Serial.println("Control");
+      #if DEBUG == 1
+        Serial.println("Control");
+      #endif
     }
     else{
       buff = 0;
@@ -141,7 +149,7 @@ void sendNibble(uint8_t message){
   for(int i=0; i<4; i++){    //send bits 3-0
     if(message & 1<<(3-i) ){  //if bit to transmit is a 1
       dataPullLow(DATA_PIN);  //pull data pin low
-      delayMicroseconds(1750); //wait for appointed time   <<--MAZDA 3 2004 funziona con 1750 e non 1700
+      delayMicroseconds(1800); //wait for appointed time   <<--MAZDA 3 2004 funziona con 1750 e non 1700
       dataFloat(DATA_PIN);      //let bus go high again
       delayMicroseconds(1200);  //wait for appointed time
     }

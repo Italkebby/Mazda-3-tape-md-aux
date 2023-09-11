@@ -21,6 +21,12 @@ I think the DCDC converter is a plus it doesn't really required, I could use Vin
 After I purchased the Bluetooth module [like this one](btmodule.jpg), I was having alternator whine noise in the audio line, this issue could be about ground loop problem so I bought [this](groundloopinsulator.jpg) to detach the ground fixing the problem.
 
 
+Update 11/09/2023
+Last week all the system stop working correctly, I mean the Tape/md function run in timeout after 30 seconds.
+I was able to fix that problem but I'm not sure about the causes. I have draw a schematic that shows where I think the potentially causes are:
+![Alt text](Problems/problema_timeout30sec.png)
+It's likely that the cable tie I put in place as an electrician exerted pressure and, due to vibrations, caused a poor connection or disconnected one of these audio jacks.
+
 Other info about this project:
 - https://github.com/Krasutski/mazda_tape_deck_emulator -> code for Mazda 6 2005 3.0L with tape/md button
 - https://nikosapi.org/hardware/mazda-radio/davidoshea-archive/radio/ -> how does it work the bus communication (head unit <--> Tape Deck)
