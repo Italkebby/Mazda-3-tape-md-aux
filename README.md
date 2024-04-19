@@ -32,7 +32,9 @@ It's likely that the cable tie I put in place as an electrician exerted pressure
 Update 19/04/2024
 
 Finally I realize why after some time this Mod run into a BUG.
-Problem: After I pressed TAPE button, it shows "Tape play" but after about 30 sec it disappears.
+
+PROBLEM: After I pressed TAPE button, it shows "Tape play" but after about 30 sec it disappears.
+
 FIX: Make sure to NOT enable "RPT" function by pressing '1' button (could be repeat loop ? I have to check on the manual)
 ![Alt text](Problems/fix_30sec_audio.png)
 
