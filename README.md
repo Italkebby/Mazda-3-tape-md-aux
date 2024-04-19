@@ -25,7 +25,7 @@ Update 11/09/2023
 
 Last week all the system stop working correctly, I mean the Tape/md function run in timeout after 30 seconds.
 I was able to fix that problem but I'm not sure about the causes. I have draw a schematic that shows where I think the potentially causes are:
-![Alt text](Problems/fix_30sec_audio.png)
+![Alt text](Problems/problema_timeout30sec.png)
 
 It's likely that the cable tie I put in place as an electrician exerted pressure and, due to vibrations, caused a poor connection or disconnected one of these audio jacks.
 
@@ -34,7 +34,7 @@ Update 19/04/2024
 Finally I realize why after some time this Mod run into a BUG.
 Problem: After I pressed TAPE button, it shows "Tape play" but after about 30 sec it disappears.
 FIX: Make sure to NOT enable "RPT" function by pressing '1' button (could be repeat loop ? I have to check on the manual)
-![Alt text](Problems/problema_timeout30sec.png)
+![Alt text](Problems/fix_30sec_audio.png)
 
 Other info about this project:
 - https://github.com/Krasutski/mazda_tape_deck_emulator -> code for Mazda 6 2005 3.0L with tape/md button
